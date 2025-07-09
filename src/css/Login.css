@@ -1,0 +1,92 @@
+/* ========== ZARA-Inspired Elegant Login ========== */
+
+.login-container {
+  max-width: 420px;
+  margin: 80px auto;
+  padding: 48px;
+  background: #ffffff;
+  border: 1px solid #00000073;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+  border-radius: 0;
+  box-sizing: border-box;
+}
+
+/* Heading */
+.login-container h2 {
+  font-size: 24px;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #111;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+/* Input fields */
+.login-container input[type="email"],
+.login-container input[type="password"] {
+  width: 100%;
+  padding: 10px 0;
+  margin-bottom: 30px;
+  font-size: 15px;
+  border: none;
+  border-bottom: 1px solid #bbb;
+  background: transparent;
+  color: #111;
+  transition: border-color 0.3s ease;
+}
+
+.login-container input:focus {
+  border-bottom-color: #000;
+  outline: none;
+}
+
+/* Button */
+.login-container button[type="submit"] {
+  width: 100%;
+  padding: 12px 0;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background: #000;
+  color: #fff;
+  border: 1px solid #000;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-container button:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* Message */
+.login-container p {
+  font-size: 13px;
+  text-align: center;
+  color: #555;
+  margin-top: 30px;
+}
+
+/* Link */
+.login-container a {
+  color: #000;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.login-container a:hover {
+  color: #555;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .login-container {
+    padding: 36px 24px;
+    margin: 60px 16px;
+  }
+
+  .login-container h2 {
+    font-size: 20px;
+  }
+}

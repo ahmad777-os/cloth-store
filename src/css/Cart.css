@@ -1,0 +1,112 @@
+/* ===== Cart Container ===== */
+.cart-container {
+  max-width: 1000px;
+  margin: 60px auto;
+  padding: 40px 24px;
+  background-color: #fff;
+}
+
+/* ===== Headings ===== */
+.cart-container h2 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 24px;
+  color: #111;
+  text-align: center;
+}
+
+.cart-container h3 {
+  font-size: 22px;
+  margin-top: 30px;
+  color: #222;
+}
+
+/* ===== Empty Cart Message ===== */
+.cart-container p {
+  text-align: center;
+  color: #555;
+  font-size: 16px;
+}
+
+/* ===== Cart List ===== */
+.cart-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* ===== Individual Cart Card ===== */
+.cart-card {
+  display: flex;
+  gap: 20px;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  padding: 16px;
+  align-items: center;
+  background-color: #fafafa;
+  transition: box-shadow 0.3s ease;
+}
+
+.cart-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* ===== Product Image ===== */
+.cart-image {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+/* ===== Remove Button ===== */
+.cart-remove-btn {
+  background-color: #111;
+  color: #fff;
+  border: none;
+  padding: 10px 14px;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+.cart-remove-btn:hover {
+  background-color: #333;
+}
+
+/* ===== Checkout Button ===== */
+.cart-checkout-btn {
+  margin-top: 24px;
+  padding: 14px 20px;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+.cart-checkout-btn:hover {
+  background-color: #222;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  .cart-card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .cart-image {
+    width: 100%;
+    height: auto;
+  }
+
+  .cart-checkout-btn {
+    font-size: 15px;
+  }
+}

@@ -1,0 +1,217 @@
+/* ===== Global Reset ===== */
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Helvetica Neue', sans-serif;
+  background-color: #fff;
+  color: #000;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  padding: 16px 32px;
+  background-color: #fff;
+  color: #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eaeaea;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+/* ===== Logo ===== */
+.navbar-logo {
+  font-size: 40px;
+  font-weight: 500;
+  color: #000;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ===== Menu ===== */
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  font-size: 14px;
+  color: #000;
+  font-weight: 400;
+  position: relative;
+}
+
+.navbar-links a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 1px;
+  background: #000;
+  transition: width 0.3s;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+}
+
+.navbar-links a:hover::after {
+  width: 100%;
+}
+
+/* ===== Actions (buttons, icons) ===== */
+.navbar-actions,
+.navbar-links {
+  display: flex;
+  gap: 16px;
+}
+
+.navbar-button,
+.order-history-button,
+.logout-button {
+  padding: 10px 18px;
+  border: 1px solid #000;
+  background: transparent;
+  color: #000;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.navbar-button:hover,
+.order-history-button:hover,
+.logout-button:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* ===== Icon Link ===== */
+.icon-link {
+  display: flex;
+  align-items: center;
+  color: #000;
+  padding: 6px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.icon-link:hover {
+  color: #555;
+}
+
+/* ===== Icons ===== */
+.icon,
+.icon-bell {
+  width: 20px;
+  height: 20px;
+}
+
+/* ===== Notification Dropdown ===== */
+.notification-bell {
+  background: none;
+  border: none;
+  padding: 6px;
+  cursor: pointer;
+  color: #000;
+  display: flex;
+  align-items: center;
+}
+
+.notification-dropdown {
+  position: absolute;
+  top: 56px;
+  right: 20px;
+  width: 280px;
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 14px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+  border-radius: 4px;
+  z-index: 1000;
+}
+
+.notification-dropdown h4 {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 6px;
+}
+
+.notification-dropdown ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+.notification-dropdown li {
+  font-size: 13px;
+  padding: 8px 0;
+  border-bottom: 1px solid #f2f2f2;
+}
+
+/* ===== Welcome Text ===== */
+.navbar-welcome {
+  font-size: 13px;
+  color: #000;
+}
+
+/* ===== Hamburger ===== */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  color: #000;
+  cursor: pointer;
+}
+
+/* ===== Mobile Styles ===== */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+
+  .navbar-menu {
+    display: none;
+    flex-direction: column;
+    background: #fff;
+    border: 1px solid #e0e0e0;
+    position: absolute;
+    right: 20px;
+    top: 70px;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+    width: 85%;
+  }
+
+  .navbar-menu.open {
+    display: flex;
+  }
+
+  .navbar-links,
+  .navbar-actions {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
+
+  .navbar-links a,
+  .navbar-button,
+  .order-history-button,
+  .logout-button {
+    width: 100%;
+    text-align: left;
+  }
+}

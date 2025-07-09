@@ -1,0 +1,93 @@
+/* ===== AddDetails Container ===== */
+.add-details-form {
+  max-width: 500px;
+  margin: 80px auto;
+  padding: 40px;
+  background-color: #ffffff;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ===== Heading ===== */
+.add-details-form h2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #111;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+/* ===== Input Fields ===== */
+.add-details-form input[type="text"],
+.add-details-form input[type="tel"] {
+  padding: 12px 14px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fafafa;
+  font-size: 15px;
+  color: #333;
+  transition: border-color 0.3s ease;
+}
+
+.add-details-form input:focus {
+  border-color: #000;
+  outline: none;
+}
+
+/* ===== Submit Button ===== */
+.add-details-form button[type="submit"] {
+  padding: 14px;
+  background-color: #111;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+.add-details-form button:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+}
+
+.add-details-form button:hover:enabled {
+  background-color: #333;
+}
+
+/* ===== Status Messages ===== */
+.add-details-form p {
+  font-size: 14px;
+  margin-top: -6px;
+  margin-bottom: 4px;
+  text-align: center;
+}
+
+.add-details-form p[style*="color: red"] {
+  color: #c00;
+}
+
+.add-details-form p[style*="color: green"] {
+  color: #007f00;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 480px) {
+  .add-details-form {
+    padding: 24px;
+    margin: 40px 16px;
+  }
+
+  .add-details-form h2 {
+    font-size: 24px;
+  }
+
+  .add-details-form button {
+    font-size: 15px;
+  }
+}
