@@ -3,13 +3,15 @@ const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const User = require('../models/User');
 
+// Load env variables
+require('dotenv').config();
+
 const router = express.Router();
 
-// Use a strong secret key (ideally from env variables)
-const JWT_SECRET = '7c9e3a9f5b4e2d8f1234abcde56789f0e1d2c3b4a5f6d7e8c9b0a1b2c3d4e5f6';
+// Use values from .env
+const JWT_SECRET = process.env.JWT_SECRET;
+const ADMIN_SECRET_CODE = process.env.ADMIN_SECRET_CODE;
 
-// Define your secret admin code here (should be kept private)
-const ADMIN_SECRET_CODE = 'ahmadadmin';
 
 // Signup route// Signup route
 router.post('/signup', async (req, res) => {

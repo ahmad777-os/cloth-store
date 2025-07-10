@@ -1,3 +1,5 @@
+// server.js
+require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
@@ -14,7 +16,7 @@ const app = express();
 
 // CORS configuration
 const corsOptions = {
-  origin: 'http://localhost:3000',
+  origin: process.env.CLIENT_URL, // from .env
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
   credentials: true,
@@ -34,18 +36,15 @@ app.use('/api/notifications', notificationRoutes);
 app.use('/api/messages', messageRoutes);
 
 // Connect to MongoDB
-mongoose.connect(
-  'mongodb+srv://ahmadtariq7799:xdZMRt4qcMTp8tTR@cluster0.g5w5g4a.mongodb.net/AddProducts?retryWrites=true&w=majority&appName=Cluster0',
-  {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  }
-)
+mongoose.connect(process.env.MONGO_URI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
 .then(() => console.log('✅ MongoDB connected to AddProducts'))
 .catch((err) => console.error('❌ MongoDB connection error:', err));
 
 // Start the server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
-  console.log(`🚀 Server running at http://192.168.1.4:${PORT}`);
+  console.log(`🚀 Server running at http://localhost:${PORT}`);
 });
